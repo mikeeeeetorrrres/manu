@@ -1,0 +1,66 @@
+/* Reset y Flexbox */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+#containertab {
+  display: flex; /* Alineación horizontal */
+  justify-content: space-around; /* Distribuir elementos de manera uniforme */
+  align-items: center; /* Centrado vertical de los elementos */
+  padding: 10px; /* Espaciado interno */
+  background-color: #f8f9fa; /* Fondo claro */
+  position: fixed; /* Fijar el contenedor al fondo */
+  bottom: 0; /* Parte inferior */
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho */
+  border-top: 1px solid #ddd; /* Línea sutil de separación */
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para elevar el diseño */
+  z-index: 10; /* Evitar superposición de contenido */
+}
+
+.tab {
+  display: flex;
+  flex-direction: column; /* Iconos y texto en columna */
+  align-items: center; /* Centrado */
+  gap: 8px; /* Espacio entre el icono y el texto */
+  cursor: pointer; /* Indicador de clickeable */
+  transition: transform 0.2s ease, color 0.2s ease; /* Suavidad en transformaciones */
+  color: #6c757d; /* Color inicial de los tabs */
+}
+
+.tab i {
+  font-size: 24px; /* Tamaño del icono */
+}
+
+.tab:hover {
+  transform: translateY(-5px); /* Animación al pasar el mouse */
+  color: #d7d7d7; /* Cambiar a color de énfasis */
+}
+
+.seleccionado {
+  background-color:rgb(239, 160, 205) ; /* Fondo del tab seleccionado */
+  color: rgb(239, 160, 205); /* Texto e icono en blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  transition: background-color 0.4s ease, transform 0.4s ease; /* Suavidad en cambios */
+  transform: scale(1.1); /* Agrandar ligeramente el tab seleccionado */
+}
+
+.seleccionado i {
+  animation: bounce 0.5s ease infinite alternate; /* Animación del icono */
+}
+
+/* Animación personalizada para el icono */
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}

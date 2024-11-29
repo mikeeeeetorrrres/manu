@@ -1,0 +1,73 @@
+/* Reset general de márgenes, paddings y bordes */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Eliminar el estilo por defecto de los enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Eliminar el estilo de las listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Normalizar las tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Normalizar los elementos de formularios */
+input, textarea, select, button {
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+/* Normalizar el estilo de los elementos de texto */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Asegurarse de que los encabezados no tengan márgenes indeseados */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Normalizar los campos de formularios */
+input[type="text"],
+input[type="password"],
+textarea {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+/* Quitar el estilo por defecto de los botones */
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+/* Normalizar imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Normalizar el scroll */
+html {
+  scroll-behavior: smooth;
+}
